@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+
+- story: spravka path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: spravka
+    - action: utter_spravka
+
+### COURSERA ###
+- story: coursera path1
+  steps:
+    - intent: coursera
+    - action: utter_coursera
+    - intent: prosyat_oplatu_coursera
+    - action: utter_prosyat_oplatu_coursera
+
+- story: coursera path2
+  steps:
+    - intent: coursera
+    - action: utter_coursera
+    - intent: netu_priglachenie_coursera
+    - action: utter_netu_priglachenie_coursera
+
+- story: coursera path3
+  steps:
+    - intent: coursera
+    - action: utter_coursera
+    - intent: drugie_kursy_coursera
+    - action: utter_drugie_kursy_coursera
+
+- story: coursera path4
+  steps:
+    - intent: coursera
+    - action: utter_coursera
+    - intent: starye_kursy_coursera
+    - action: utter_starye_kursy_coursera
+
+- story: coursera path5
+  steps:
+    - intent: coursera
+    - action: utter_coursera
+    - intent: retake_coursera
+    - action: utter_retake_coursera

@@ -1,0 +1,59 @@
+version: '3.1'
+intents:
+- coursera
+- drugie_kursy_coursera
+- goodbye
+- greet
+- netu_priglachenie_coursera
+- onay
+- prosyat_oplatu_coursera
+- retake_coursera
+- spravka
+- starye_kursy_coursera
+responses:
+  utter_greet:
+  - text: Привет. Я 'Умный Студент'. Чем могу помочь?
+  - text: Здравствуйте. Готов помочь тебе с вашеми вопросами. Что вас интересует?
+  utter_goodbye:
+  - text: Рад был помочь. Пока!
+  utter_spravka:
+  - text: Справку с места учебы на русском и казахском языках вы можете получить в своем деканате.
+  utter_onay:
+  - text: Для получения карточки 'ONAY' нужно обратиться в деканат.
+  utter_coursera:
+  - text: Что вас интересует по поводу Coursera?
+    buttons:
+    - title: Я не могу пройти курсы в Coursera, просят произвести оплату
+      payload: /prosyat_oplatu_coursera
+    - title: Я не могу найти приглашение
+      payload: /netu_priglachenie_coursera
+    - title: Могу я пройти другие курсы, помимо обязательных?
+      payload: /drugie_kursy_coursera
+    - title: Я поменял специальность, но в Coursera осталась старая
+      payload: /starye_kursy_coursera
+    - title: Мне нужно пройти ретейк через Coursera, как мне получить доступ?
+      payload: /retake_coursera
+  utter_prosyat_oplatu_coursera:
+  - text: Пожалуйста, проверьте через какую почту вы зашли в программу. Возможно вы зашли через личную почту. На вашу почту id@iitu.edu.kz должно прийти приглашение со ссылкой на Coursera. Нужно перейти по ссылке, так вы активируете вашу лицензию.
+  utter_netu_priglachenie_coursera:
+  - text: Попробуйте проверить спам, если в спаме нету письма приглашения, обратитесь к ментору своего курса.
+  utter_drugie_kursy_coursera:
+  - text: Да, вы можете пройти любые другие курсы абсолютно бесплатно.
+  utter_starye_kursy_coursera:
+  - text: Вы можете обратиться к своему ментору, чтобы поменять специальность в Coursera.
+  utter_retake_coursera:
+  - text: Вам нужно подойти в 803 кабинет с заявлением и чеком об оплате. Заявление вы можете найти в деканате.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_greet
+- utter_goodbye
+- utter_spravka
+- utter_onay
+- utter_coursera
+- utter_prosyat_oplatu_coursera
+- utter_netu_priglachenie_coursera
+- utter_drugie_kursy_coursera
+- utter_starye_kursy_coursera
+- utter_retake_coursera
