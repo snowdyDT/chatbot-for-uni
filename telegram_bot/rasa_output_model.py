@@ -13,10 +13,13 @@ class Model:
     def message(self, message: str) -> str:
         message = message.strip()
         result = asyncio.run(self.agent.parse_message(message))
-        print(result)
+
         return json_to_string(result)
 
 
 mdl = Model(config.RASA_MODEL_PATH)
-sentence = "Привет"
-print(mdl.message(sentence))
+
+sentence = "как получить справку"
+result = mdl.message(sentence)
+
+print(result)
