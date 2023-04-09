@@ -1,46 +1,226 @@
 version: "3.1"
 
 stories:
-
-- story: spravka path
+### GENERAL STORIES ###
+- story: greeting path
   steps:
     - intent: greet
     - action: utter_greet
+
+- story: goodbye path
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: out_of_scope path
+  steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+### SPRAVKA ###
+- story: spravka path1
+  steps:
     - intent: spravka
-    - action: utter_spravka
+    - action: action_spravka_buttons
+    - intent: mesta_ucheby_spravka
+    - action: utter_mesta_ucheby_spravka
+
+- story: mesta_ucheby_spravka path
+  steps:
+    - intent: mesta_ucheby_spravka
+    - action: utter_mesta_ucheby_spravka
+
+- story: spravka path2
+  steps:
+    - intent: spravka
+    - action: action_spravka_buttons
+    - intent: gosudarstvennye_posobiya_spravka
+    - action: utter_gosudarstvennye_posobiya_spravka
+
+- story: gosudarstvennye_posobiya_spravka path
+  steps:
+    - intent: gosudarstvennye_posobiya_spravka
+    - action: utter_gosudarstvennye_posobiya_spravka
+
+- story: spravka path3
+  steps:
+    - intent: spravka
+    - action: action_spravka_buttons
+    - intent: voenkomat_spravka
+    - action: utter_voenkomat_spravka
+
+- story: voenkomat_spravka path
+  steps:
+    - intent: voenkomat_spravka
+    - action: utter_voenkomat_spravka
+
+### ONAY ###
+- story: onay path1
+  steps:
+    - intent: onay
+    - action: action_onay_buttons
+    - intent: kak_poluchit_onay
+    - action: utter_kak_poluchit_onay
+
+- story: kak_poluchit_onay path
+  steps:
+    - intent: kak_poluchit_onay
+    - action: utter_kak_poluchit_onay
+
+- story: onay path2
+  steps:
+    - intent: onay
+    - action: action_onay_buttons
+    - intent: poteryal_onay
+    - action: utter_poteryal_onay
+
+- story: poteryal_onay path
+  steps:
+    - intent: poteryal_onay
+    - action: utter_poteryal_onay
+
+- story: onay path3
+  steps:
+    - intent: onay
+    - action: action_onay_buttons
+    - intent: kolledj_kak_poluchit_onay
+    - action: utter_kolledj_kak_poluchit_onay
+
+- story: kolledj_kak_poluchit_onay path
+  steps:
+    - intent: kolledj_kak_poluchit_onay
+    - action: utter_kolledj_kak_poluchit_onay
+
+- story: onay path4
+  steps:
+    - intent: onay
+    - action: action_onay_buttons
+    - intent: inostranec_kak_poluchit_onay
+    - action: utter_inostranec_kak_poluchit_onay
+
+- story: inostranec_kak_poluchit_onay path
+  steps:
+    - intent: inostranec_kak_poluchit_onay
+    - action: utter_inostranec_kak_poluchit_onay
 
 ### COURSERA ###
 - story: coursera path1
   steps:
     - intent: coursera
-    - action: utter_coursera
+    - action: action_coursera_buttons
+    - intent: prosyat_oplatu_coursera
+    - action: utter_prosyat_oplatu_coursera
+
+- story: prosyat_oplatu_coursera path
+  steps:
     - intent: prosyat_oplatu_coursera
     - action: utter_prosyat_oplatu_coursera
 
 - story: coursera path2
   steps:
     - intent: coursera
-    - action: utter_coursera
+    - action: action_coursera_buttons
+    - intent: netu_priglachenie_coursera
+    - action: utter_netu_priglachenie_coursera
+
+- story: netu_priglachenie_coursera path
+  steps:
     - intent: netu_priglachenie_coursera
     - action: utter_netu_priglachenie_coursera
 
 - story: coursera path3
   steps:
     - intent: coursera
-    - action: utter_coursera
+    - action: action_coursera_buttons
+    - intent: drugie_kursy_coursera
+    - action: utter_drugie_kursy_coursera
+
+- story: drugie_kursy_coursera path
+  steps:
     - intent: drugie_kursy_coursera
     - action: utter_drugie_kursy_coursera
 
 - story: coursera path4
   steps:
     - intent: coursera
-    - action: utter_coursera
+    - action: action_coursera_buttons
+    - intent: starye_kursy_coursera
+    - action: utter_starye_kursy_coursera
+
+- story: starye_kursy_coursera path
+  steps:
     - intent: starye_kursy_coursera
     - action: utter_starye_kursy_coursera
 
 - story: coursera path5
   steps:
     - intent: coursera
-    - action: utter_coursera
+    - action: action_coursera_buttons
     - intent: retake_coursera
     - action: utter_retake_coursera
+
+- story: retake_coursera path
+  steps:
+    - intent: retake_coursera
+    - action: utter_retake_coursera
+
+### ACADEMIC MOBILITY ###
+- story: chto_takoe_academ_mob path
+  steps:
+    - intent: chto_takoe_academ_mob
+    - action: utter_chto_takoe_academ_mob
+
+- story: kriterii_otbora_academ_mob path
+  steps:
+    - intent: kriterii_otbora_academ_mob
+    - action: utter_kriterii_otbora_academ_mob
+
+- story: sroki_academ_mob path
+  steps:
+    - intent: sroki_academ_mob
+    - action: utter_sroki_academ_mob
+
+- story: osnovaniya_academ_mob path
+  steps:
+    - intent: osnovaniya_academ_mob
+    - action: utter_osnovaniya_academ_mob
+
+- story: obrazec_recom_academ_mob path
+  steps:
+    - intent: obrazec_recom_academ_mob
+    - action: utter_obrazec_recom_academ_mob
+
+- story: ielts_academ_mob path
+  steps:
+    - intent: ielts_academ_mob
+    - action: utter_ielts_academ_mob
+
+- story: uchebnaia_uspevaemost_academ_mob path
+  steps:
+    - intent: uchebnaia_uspevaemost_academ_mob
+    - action: utter_uchebnaia_uspevaemost_academ_mob
+
+- story: poslednii_god_academ_mob path
+  steps:
+    - intent: poslednii_god_academ_mob
+    - action: utter_poslednii_god_academ_mob
+
+- story: otkaz_academ_mob path
+  steps:
+    - intent: otkaz_academ_mob
+    - action: utter_otkaz_academ_mob
+
+- story: freemover_academ_mob path
+  steps:
+    - intent: freemover_academ_mob
+    - action: utter_freemover_academ_mob
+
+- story: voennaia_kafedra_academ_mob path
+  steps:
+    - intent: voennaia_kafedra_academ_mob
+    - action: utter_voennaia_kafedra_academ_mob
+
+- story: result_academ_mob path
+  steps:
+    - intent: result_academ_mob
+    - action: utter_result_academ_mob
