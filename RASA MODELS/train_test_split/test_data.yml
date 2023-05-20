@@ -1,0 +1,182 @@
+version: "3.1"
+nlu:
+- intent: osnovaniya_academ_mob
+  examples: |
+    - На каком основании студенты МУИТ могут поехать на мобильность по обмену?
+- intent: poslednii_god_academ_mob
+  examples: |
+    - можно ли поехать по обмену в последнем семестре
+- intent: voennaia_kafedra_academ_mob
+  examples: |
+    - академическая мобильность как решить вопрос с военной кафедрой
+- intent: kriterii_otbora_academ_mob
+  examples: |
+    - какие критерии отбора для участия в программе академической мобильности?
+- intent: sroki_academ_mob
+  examples: |
+    - подскажи сроки для академической мобильности
+- intent: otkaz_academ_mob
+  examples: |
+    - Можно ли отказаться от участия в мобильности на одном из этапов конкурса?
+- intent: freemover_academ_mob
+  examples: |
+    - можно ли выбрать другой универ по мобильности
+- intent: result_academ_mob
+  examples: |
+    - что даст обучение по обмену
+- intent: grant_withdrawal
+  examples: |
+    - При каких условиях можно лишиться государственного образовательного гранта
+- intent: get_transcript
+  examples: |
+    - получить транскрипт
+- intent: no_grades
+  examples: |
+    - что делать Если мне не поставили баллы по дисциплинам или РК?
+- intent: cabinets_of_faculty
+  examples: |
+    - Где находится кафедра
+- intent: who_is_adviser
+  examples: |
+    - Как связаться с моим эдвайзером?
+- intent: return_overpayed_money_tuition
+  examples: |
+    - Как я могу получить возврат переплаченной суммы за обучение?
+- intent: what_is_academic_calendar
+  examples: |
+    - Какие важные даты в академическом календаре?
+- intent: extend_midterms
+  examples: |
+    - В каких случаях можно продлить Рубежный контроль?
+- intent: extend_finals
+  examples: |
+    - В каких случаях можно продлить файналы?
+- intent: academic_internship
+  examples: |
+    - Каковы требования для учебной и производственной практики?
+- intent: change_group
+  examples: |
+    - Что необходимо для смены образовательной группы?
+- intent: recourse
+  examples: |
+    - перекурса
+- intent: finals_earlier
+  examples: |
+    - Как сдать экзамены раньше установленного срока?
+- intent: free_from_studies
+  examples: |
+    - как получить свободное посещение?
+- intent: summer_semestr
+  examples: |
+    - Что такое летний семестр?
+- intent: lost_my_stuff
+  examples: |
+    - Кто ответственный за потерянные вещи в университете?
+- intent: travel_allowance
+  examples: |
+    - Как можно получить дорожные выплаты?
+- intent: polyclinic_out_of_town_students
+  examples: |
+    - К какой поликлинике необходимо прикрепиться иногороднему студенту?
+- intent: poteryal_onay
+  examples: |
+    - Что мне делать если я потерял транспортную карточку Онай?
+- intent: kolledj_kak_poluchit_onay
+  examples: |
+    - онай для колледж
+- intent: inostranec_kak_poluchit_onay
+  examples: |
+    - онай для иностранцев
+- intent: prosyat_oplatu_coursera
+  examples: |
+    - просят оплату на курсере
+- intent: netu_priglachenie_coursera
+  examples: |
+    - Я не могу найти приглашениев курсере
+- intent: drugie_kursy_coursera
+  examples: |
+    - можно ли другие курсы проходить в курсере
+- intent: starye_kursy_coursera
+  examples: |
+    - Я изменил специальность, но в моем профиле на Coursera остались старые курсы. Как их обновить?
+- intent: retake_coursera
+  examples: |
+    - ретейк в курсере
+- intent: academ_mob
+  examples: |
+    - мобильность по обмену
+- intent: uchebnaia_uspevaemost_academ_mob
+  examples: |
+    - академическая мобильность оценки влияют
+- intent: v_muit_perevod
+  examples: |
+    - Какие требования для перевода в МУИТ?
+- intent: v_drugoi_universitet_perevod
+  examples: |
+    - Как можно перевестись в другой университет?
+- intent: lishenie_granta_perevod
+  examples: |
+    - Что происходит с государственным образовательным грантом при переводе?
+- intent: expulsion
+  examples: |
+    - При каких условиях отчисляют студента
+- intent: academic_vacation
+  examples: |
+    - Какие документы необходимы для академического отпуска?
+- intent: ill_during_exams
+  examples: |
+    - Что делать если я заболел во время прохождения рубежного контроля?
+- intent: several_retakes
+  examples: |
+    - много ритейков
+- intent: mesta_ucheby_spravka
+  examples: |
+    - Как можно получить справку с места учебы?
+- intent: gosudarstvennye_posobiya_spravka
+  examples: |
+    - Что нужно для получения справки для государственных пособий?
+- intent: voenkomat_spravka
+  examples: |
+    - Какие документы мне нужны для получения справки для военкомата?
+- intent: coursera
+  examples: |
+    - коурсера
+- intent: chto_takoe_academ_mob
+  examples: |
+    - что такое мобильность по обмену
+- intent: spravka
+  examples: |
+    - справка нужна
+- intent: kak_poluchit_onay
+  examples: |
+    - Где и как я могу оформить Онай?
+- intent: ielts_academ_mob
+  examples: |
+    - Обязательно ли сдавать IELTS/ TOEFL для участия в программе академической мобильности?
+- intent: perevod
+  examples: |
+    - интересует перевод
+- intent: obrazec_recom_academ_mob
+  examples: |
+    - Есть ли образец для составления рекомендательного письма?
+- intent: onay
+  examples: |
+    - онай онай
+- intent: out_of_scope
+  examples: |
+    - это не имеет смысла
+    - что-то непонятное
+- intent: goodbye
+  examples: |
+    - до скорого свидания
+    - до скорого
+    - досвидос
+    - до скорой встречи
+    - пока-пока
+- intent: greet
+  examples: |
+    - добрый день
+    - алло
+    - сәлем
+    - ку
+    - добро пожаловать

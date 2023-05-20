@@ -68,3 +68,17 @@ class ActionAcademMobButtons(Action):
 
         return []
 
+
+class ActionPerevodButtons(Action):
+    def name(self) -> Text:
+        return "action_perevod_buttons"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        buttons = [
+            {"payload": "/v_muit_perevod", "title": "Перевод в МУИТ"},
+            {"payload": "/v_drugoi_universitet_perevod", "title": "Перевод в другой университет"},
+            {"payload": "/lishenie_granta_perevod", "title": "Лишение гранта при переводе"}
+        ]
+        dispatcher.utter_message(text="Какие вопросы интересует насчет перевода?", buttons=buttons, button_type='vertical')
+
+        return []

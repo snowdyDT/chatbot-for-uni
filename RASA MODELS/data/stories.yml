@@ -224,3 +224,152 @@ stories:
   steps:
     - intent: result_academ_mob
     - action: utter_result_academ_mob
+
+### PEREVOD ###
+- story: perevod path1
+  steps:
+    - intent: perevod
+    - action: action_perevod_buttons
+    - intent: v_muit_perevod
+    - action: utter_v_muit_perevod
+
+- story: v_muit_perevod path
+  steps:
+    - intent: v_muit_perevod
+    - action: utter_v_muit_perevod
+
+- story: perevod path2
+  steps:
+    - intent: perevod
+    - action: action_perevod_buttons
+    - intent: v_drugoi_universitet_perevod
+    - action: utter_v_drugoi_universitet_perevod
+
+- story: v_drugoi_universitet_perevod path
+  steps:
+    - intent: v_drugoi_universitet_perevod
+    - action: utter_v_drugoi_universitet_perevod
+
+- story: perevod path3
+  steps:
+    - intent: perevod
+    - action: action_perevod_buttons
+    - intent: lishenie_granta_perevod
+    - action: utter_lishenie_granta_perevod
+
+- story: lishenie_granta_perevod path
+  steps:
+    - intent: lishenie_granta_perevod
+    - action: utter_lishenie_granta_perevod
+
+### UCHEBNYI PROCESS ###
+
+- story: expulsion path
+  steps:
+    - intent: expulsion
+    - action: utter_expulsion
+
+- story: grant_withdrawal path
+  steps:
+    - intent: grant_withdrawal
+    - action: utter_grant_withdrawal
+
+- story: academic_vacation path
+  steps:
+    - intent: academic_vacation
+    - action: utter_academic_vacation
+
+- story: ill_during_exams path
+  steps:
+    - intent: ill_during_exams
+    - action: utter_ill_during_exams
+
+- story: several_retakes path
+  steps:
+    - intent: several_retakes
+    - action: utter_several_retakes
+
+- story: get_transcript path
+  steps:
+    - intent: get_transcript
+    - action: utter_get_transcript
+
+- story: no_grades path
+  steps:
+    - intent: no_grades
+    - action: utter_no_grades
+
+- story: cabinets_of_faculty path
+  steps:
+    - intent: cabinets_of_faculty
+    - action: utter_cabinets_of_faculty
+
+- story: who_is_adviser path
+  steps:
+    - intent: who_is_adviser
+    - action: utter_who_is_adviser
+
+- story: return_overpayed_money_tuition path
+  steps:
+    - intent: return_overpayed_money_tuition
+    - action: utter_return_overpayed_money_tuition
+
+- story: what_is_academic_calendar path
+  steps:
+    - intent: what_is_academic_calendar
+    - action: utter_what_is_academic_calendar
+
+- story: extend_midterms path
+  steps:
+    - intent: extend_midterms
+    - action: utter_extend_midterms
+
+- story: extend_finals path
+  steps:
+    - intent: extend_finals
+    - action: utter_extend_finals
+
+- story: academic_internship path
+  steps:
+    - intent: academic_internship
+    - action: utter_academic_internship
+
+- story: change_group path
+  steps:
+    - intent: change_group
+    - action: utter_change_group
+
+- story: recourse path
+  steps:
+    - intent: recourse
+    - action: utter_recourse
+
+- story: finals_earlier path
+  steps:
+    - intent: finals_earlier
+    - action: utter_finals_earlier
+
+- story: free_from_studies path
+  steps:
+    - intent: free_from_studies
+    - action: utter_free_from_studies
+
+- story: summer_semestr path
+  steps:
+    - intent: summer_semestr
+    - action: utter_summer_semestr
+
+- story: lost_my_stuff path
+  steps:
+    - intent: lost_my_stuff
+    - action: utter_lost_my_stuff
+
+- story: travel_allowance path
+  steps:
+    - intent: travel_allowance
+    - action: utter_travel_allowance
+
+- story: polyclinic_out_of_town_students path
+  steps:
+    - intent: polyclinic_out_of_town_students
+    - action: utter_polyclinic_out_of_town_students
