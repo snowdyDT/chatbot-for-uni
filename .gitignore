@@ -5,3 +5,4 @@ __pycache__/
 .DS_Store
 .rasa/cache
 RASA MODELS/.rasa/cache
+RASA MODELS/models
