@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+  rasa:
+    image: chatbot_for_uni
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+  action_server:
+    image: chatbot_for_uni_action
+    ports:
+      - 5055:5055
+    volumes:
+      - ./:/app

@@ -1,6 +1,19 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from .sqlite_tracker_store import SQLiteTrackerStore
+
+
+class ActionSaveConversation(Action):
+    def name(self) -> Text:
+        return "action_save_conversation"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Instantiate tracker store and save conversation
+        store = SQLiteTrackerStore()
+        store.save(tracker, dispatcher)
+
+        return []
 
 
 class ActionSpravkaButtons(Action):

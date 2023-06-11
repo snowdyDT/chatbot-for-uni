@@ -6,261 +6,321 @@ stories:
   steps:
     - intent: greet
     - action: utter_greet
+    - action: action_save_conversation
 
 - story: goodbye path
   steps:
     - intent: goodbye
     - action: utter_goodbye
+    - action: action_save_conversation
 
 - story: out_of_scope path
   steps:
     - intent: out_of_scope
     - action: utter_out_of_scope
+    - action: action_save_conversation
 
 ### SPRAVKA ###
 - story: spravka path1
   steps:
     - intent: spravka
     - action: action_spravka_buttons
+    - action: action_save_conversation
     - intent: mesta_ucheby_spravka
     - action: utter_mesta_ucheby_spravka
+    - action: action_save_conversation
 
 - story: mesta_ucheby_spravka path
   steps:
     - intent: mesta_ucheby_spravka
     - action: utter_mesta_ucheby_spravka
+    - action: action_save_conversation
 
 - story: spravka path2
   steps:
     - intent: spravka
     - action: action_spravka_buttons
+    - action: action_save_conversation
     - intent: gosudarstvennye_posobiya_spravka
     - action: utter_gosudarstvennye_posobiya_spravka
+    - action: action_save_conversation
 
 - story: gosudarstvennye_posobiya_spravka path
   steps:
     - intent: gosudarstvennye_posobiya_spravka
     - action: utter_gosudarstvennye_posobiya_spravka
+    - action: action_save_conversation
 
 - story: spravka path3
   steps:
     - intent: spravka
     - action: action_spravka_buttons
+    - action: action_save_conversation
     - intent: voenkomat_spravka
     - action: utter_voenkomat_spravka
+    - action: action_save_conversation
 
 - story: voenkomat_spravka path
   steps:
     - intent: voenkomat_spravka
     - action: utter_voenkomat_spravka
+    - action: action_save_conversation
 
 ### ONAY ###
 - story: onay path1
   steps:
     - intent: onay
     - action: action_onay_buttons
+    - action: action_save_conversation
     - intent: kak_poluchit_onay
     - action: utter_kak_poluchit_onay
+    - action: action_save_conversation
 
 - story: kak_poluchit_onay path
   steps:
     - intent: kak_poluchit_onay
     - action: utter_kak_poluchit_onay
+    - action: action_save_conversation
 
 - story: onay path2
   steps:
     - intent: onay
     - action: action_onay_buttons
+    - action: action_save_conversation
     - intent: poteryal_onay
     - action: utter_poteryal_onay
+    - action: action_save_conversation
 
 - story: poteryal_onay path
   steps:
     - intent: poteryal_onay
     - action: utter_poteryal_onay
+    - action: action_save_conversation
 
 - story: onay path3
   steps:
     - intent: onay
     - action: action_onay_buttons
+    - action: action_save_conversation
     - intent: kolledj_kak_poluchit_onay
     - action: utter_kolledj_kak_poluchit_onay
+    - action: action_save_conversation
 
 - story: kolledj_kak_poluchit_onay path
   steps:
     - intent: kolledj_kak_poluchit_onay
     - action: utter_kolledj_kak_poluchit_onay
+    - action: action_save_conversation
 
 - story: onay path4
   steps:
     - intent: onay
     - action: action_onay_buttons
+    - action: action_save_conversation
     - intent: inostranec_kak_poluchit_onay
     - action: utter_inostranec_kak_poluchit_onay
+    - action: action_save_conversation
 
 - story: inostranec_kak_poluchit_onay path
   steps:
     - intent: inostranec_kak_poluchit_onay
     - action: utter_inostranec_kak_poluchit_onay
+    - action: action_save_conversation
 
 ### COURSERA ###
 - story: coursera path1
   steps:
     - intent: coursera
     - action: action_coursera_buttons
+    - action: action_save_conversation
     - intent: prosyat_oplatu_coursera
     - action: utter_prosyat_oplatu_coursera
+    - action: action_save_conversation
 
 - story: prosyat_oplatu_coursera path
   steps:
     - intent: prosyat_oplatu_coursera
     - action: utter_prosyat_oplatu_coursera
+    - action: action_save_conversation
 
 - story: coursera path2
   steps:
     - intent: coursera
     - action: action_coursera_buttons
+    - action: action_save_conversation
     - intent: netu_priglachenie_coursera
     - action: utter_netu_priglachenie_coursera
+    - action: action_save_conversation
 
 - story: netu_priglachenie_coursera path
   steps:
     - intent: netu_priglachenie_coursera
     - action: utter_netu_priglachenie_coursera
+    - action: action_save_conversation
 
 - story: coursera path3
   steps:
     - intent: coursera
     - action: action_coursera_buttons
+    - action: action_save_conversation
     - intent: drugie_kursy_coursera
     - action: utter_drugie_kursy_coursera
+    - action: action_save_conversation
 
 - story: drugie_kursy_coursera path
   steps:
     - intent: drugie_kursy_coursera
     - action: utter_drugie_kursy_coursera
+    - action: action_save_conversation
 
 - story: coursera path4
   steps:
     - intent: coursera
     - action: action_coursera_buttons
+    - action: action_save_conversation
     - intent: starye_kursy_coursera
     - action: utter_starye_kursy_coursera
+    - action: action_save_conversation
 
 - story: starye_kursy_coursera path
   steps:
     - intent: starye_kursy_coursera
     - action: utter_starye_kursy_coursera
+    - action: action_save_conversation
 
 - story: coursera path5
   steps:
     - intent: coursera
     - action: action_coursera_buttons
+    - action: action_save_conversation
     - intent: retake_coursera
     - action: utter_retake_coursera
+    - action: action_save_conversation
 
 - story: retake_coursera path
   steps:
     - intent: retake_coursera
     - action: utter_retake_coursera
+    - action: action_save_conversation
 
 ### ACADEMIC MOBILITY ###
 - story: chto_takoe_academ_mob path
   steps:
     - intent: chto_takoe_academ_mob
     - action: utter_chto_takoe_academ_mob
+    - action: action_save_conversation
 
 - story: kriterii_otbora_academ_mob path
   steps:
     - intent: kriterii_otbora_academ_mob
     - action: utter_kriterii_otbora_academ_mob
+    - action: action_save_conversation
 
 - story: sroki_academ_mob path
   steps:
     - intent: sroki_academ_mob
     - action: utter_sroki_academ_mob
+    - action: action_save_conversation
 
 - story: osnovaniya_academ_mob path
   steps:
     - intent: osnovaniya_academ_mob
     - action: utter_osnovaniya_academ_mob
+    - action: action_save_conversation
 
 - story: obrazec_recom_academ_mob path
   steps:
     - intent: obrazec_recom_academ_mob
     - action: utter_obrazec_recom_academ_mob
+    - action: action_save_conversation
 
 - story: ielts_academ_mob path
   steps:
     - intent: ielts_academ_mob
     - action: utter_ielts_academ_mob
+    - action: action_save_conversation
 
 - story: uchebnaia_uspevaemost_academ_mob path
   steps:
     - intent: uchebnaia_uspevaemost_academ_mob
     - action: utter_uchebnaia_uspevaemost_academ_mob
+    - action: action_save_conversation
 
 - story: poslednii_god_academ_mob path
   steps:
     - intent: poslednii_god_academ_mob
     - action: utter_poslednii_god_academ_mob
+    - action: action_save_conversation
 
 - story: otkaz_academ_mob path
   steps:
     - intent: otkaz_academ_mob
     - action: utter_otkaz_academ_mob
+    - action: action_save_conversation
 
 - story: freemover_academ_mob path
   steps:
     - intent: freemover_academ_mob
     - action: utter_freemover_academ_mob
+    - action: action_save_conversation
 
 - story: voennaia_kafedra_academ_mob path
   steps:
     - intent: voennaia_kafedra_academ_mob
     - action: utter_voennaia_kafedra_academ_mob
+    - action: action_save_conversation
 
 - story: result_academ_mob path
   steps:
     - intent: result_academ_mob
     - action: utter_result_academ_mob
+    - action: action_save_conversation
 
 ### PEREVOD ###
 - story: perevod path1
   steps:
     - intent: perevod
     - action: action_perevod_buttons
+    - action: action_save_conversation
     - intent: v_muit_perevod
     - action: utter_v_muit_perevod
+    - action: action_save_conversation
 
 - story: v_muit_perevod path
   steps:
     - intent: v_muit_perevod
     - action: utter_v_muit_perevod
+    - action: action_save_conversation
 
 - story: perevod path2
   steps:
     - intent: perevod
     - action: action_perevod_buttons
+    - action: action_save_conversation
     - intent: v_drugoi_universitet_perevod
     - action: utter_v_drugoi_universitet_perevod
+    - action: action_save_conversation
 
 - story: v_drugoi_universitet_perevod path
   steps:
     - intent: v_drugoi_universitet_perevod
     - action: utter_v_drugoi_universitet_perevod
+    - action: action_save_conversation
 
 - story: perevod path3
   steps:
     - intent: perevod
     - action: action_perevod_buttons
+    - action: action_save_conversation
     - intent: lishenie_granta_perevod
     - action: utter_lishenie_granta_perevod
+    - action: action_save_conversation
 
 - story: lishenie_granta_perevod path
   steps:
     - intent: lishenie_granta_perevod
     - action: utter_lishenie_granta_perevod
+    - action: action_save_conversation
 
 ### UCHEBNYI PROCESS ###
 
@@ -268,108 +328,186 @@ stories:
   steps:
     - intent: expulsion
     - action: utter_expulsion
+    - action: action_save_conversation
 
 - story: grant_withdrawal path
   steps:
     - intent: grant_withdrawal
     - action: utter_grant_withdrawal
+    - action: action_save_conversation
 
 - story: academic_vacation path
   steps:
     - intent: academic_vacation
     - action: utter_academic_vacation
+    - action: action_save_conversation
 
 - story: ill_during_exams path
   steps:
     - intent: ill_during_exams
     - action: utter_ill_during_exams
+    - action: action_save_conversation
 
 - story: several_retakes path
   steps:
     - intent: several_retakes
     - action: utter_several_retakes
+    - action: action_save_conversation
 
 - story: get_transcript path
   steps:
     - intent: get_transcript
     - action: utter_get_transcript
+    - action: action_save_conversation
 
 - story: no_grades path
   steps:
     - intent: no_grades
     - action: utter_no_grades
+    - action: action_save_conversation
 
 - story: cabinets_of_faculty path
   steps:
     - intent: cabinets_of_faculty
     - action: utter_cabinets_of_faculty
+    - action: action_save_conversation
 
 - story: who_is_adviser path
   steps:
     - intent: who_is_adviser
     - action: utter_who_is_adviser
+    - action: action_save_conversation
 
 - story: return_overpayed_money_tuition path
   steps:
     - intent: return_overpayed_money_tuition
     - action: utter_return_overpayed_money_tuition
+    - action: action_save_conversation
 
 - story: what_is_academic_calendar path
   steps:
     - intent: what_is_academic_calendar
     - action: utter_what_is_academic_calendar
+    - action: action_save_conversation
 
 - story: extend_midterms path
   steps:
     - intent: extend_midterms
     - action: utter_extend_midterms
+    - action: action_save_conversation
 
 - story: extend_finals path
   steps:
     - intent: extend_finals
     - action: utter_extend_finals
+    - action: action_save_conversation
 
 - story: academic_internship path
   steps:
     - intent: academic_internship
     - action: utter_academic_internship
+    - action: action_save_conversation
 
 - story: change_group path
   steps:
     - intent: change_group
     - action: utter_change_group
+    - action: action_save_conversation
 
 - story: recourse path
   steps:
     - intent: recourse
     - action: utter_recourse
+    - action: action_save_conversation
 
 - story: finals_earlier path
   steps:
     - intent: finals_earlier
     - action: utter_finals_earlier
+    - action: action_save_conversation
 
 - story: free_from_studies path
   steps:
     - intent: free_from_studies
     - action: utter_free_from_studies
+    - action: action_save_conversation
 
 - story: summer_semestr path
   steps:
     - intent: summer_semestr
     - action: utter_summer_semestr
+    - action: action_save_conversation
 
 - story: lost_my_stuff path
   steps:
     - intent: lost_my_stuff
     - action: utter_lost_my_stuff
+    - action: action_save_conversation
 
 - story: travel_allowance path
   steps:
     - intent: travel_allowance
     - action: utter_travel_allowance
+    - action: action_save_conversation
 
 - story: polyclinic_out_of_town_students path
   steps:
     - intent: polyclinic_out_of_town_students
     - action: utter_polyclinic_out_of_town_students
+    - action: action_save_conversation
+
+### FIRST ITERATION 8 June 2023 ###
+
+- story: chatbot_possibilities path
+  steps:
+    - intent: chatbot_possibilities
+    - action: utter_chatbot_possibilities
+    - action: action_save_conversation
+
+- story: stipendiya path
+  steps:
+    - intent: stipendiya
+    - action: utter_stipendiya
+    - action: action_save_conversation
+
+- story: calculate_gpa path
+  steps:
+    - intent: calculate_gpa
+    - action: utter_calculate_gpa
+    - action: action_save_conversation
+
+- story: mat path
+  steps:
+    - intent: mat
+    - action: utter_mat
+    - action: action_save_conversation
+
+- story: main_block path
+  steps:
+    - intent: main_block
+    - action: utter_main_block
+    - action: action_save_conversation
+
+- story: deans_office path
+  steps:
+    - intent: deans_office
+    - action: utter_deans_office
+    - action: action_save_conversation
+
+- story: bukhalteriya path
+  steps:
+    - intent: bukhalteriya
+    - action: utter_bukhalteriya
+    - action: action_save_conversation
+
+- story: library path
+  steps:
+    - intent: library
+    - action: utter_library
+    - action: action_save_conversation
+
+- story: interesting_facts path
+  steps:
+    - intent: interesting_facts
+    - action: utter_interesting_facts
+    - action: action_save_conversation

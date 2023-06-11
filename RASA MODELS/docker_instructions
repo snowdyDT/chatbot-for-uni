@@ -1,0 +1,81 @@
+Certainly, you can definitely encapsulate these steps into a Docker environment. For this purpose, you will need two Docker containers: one for the Rasa server and one for the action server.
+
+To get this done, you will need to modify your Dockerfile and use a docker-compose.yml file. Here's a simple setup.
+
+1. Dockerfile:
+
+# Use an official Python runtime as a parent image
+FROM python:3.9
+
+# Sets the working directory in the Docker container
+WORKDIR /app
+
+# Copies the requirements.txt file from your local directory to the container
+COPY requirements.txt ./
+
+# Installs any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copies the rest of your local directory contents into the Docker container
+COPY . .
+
+# Specifies what command to run within the container
+CMD ["rasa", "run", "-m", "models", "--enable-api", "--cors", "*", "--debug"]
+
+
+2. Dockerfile for the action server:
+
+# Use an official Python runtime as a parent image
+FROM python:3.9
+
+# Sets the working directory in the Docker container
+WORKDIR /app
+
+# Copies the requirements.txt file from your local directory to the container
+COPY requirements-actions.txt ./
+
+# Installs any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements-actions.txt
+
+# Copies the rest of your local directory contents into the Docker container
+COPY . .
+
+# Specifies what command to run within the container
+CMD ["rasa", "run", "actions"]
+
+
+3. docker-compose.yml file:
+
+version: '3.0'
+services:
+  rasa:
+    image: chatbot_for_uni
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+  action_server:
+    image: chatbot_for_uni_action
+    ports:
+      - 5055:5055
+    volumes:
+      - ./:/app
+
+
+4. Build your Docker images and start your Docker containers:
+First, navigate to your Rasa project directory. Then, build the images and start the containers using the following commands:
+
+docker build -t chatbot_for_uni -f Dockerfile .
+docker build -t chatbot_for_uni_action -f Dockerfile_action .
+
+docker-compose up
+
+
+
+Remember that this is a basic setup and you may need to adjust it according to your project. This setup assumes that both the Rasa server and action server use the same codebase and directory structure, which is common in many Rasa projects.
+
+Also, consider setting up ngrok or a similar service in a separate container if you're using this in a production environment. You would not want to expose your local machine to the web. For simplicity's sake, I have not included this in the above setup.
+
+Additionally, please check that your chatbot's webhook endpoint is properly set in the Telegram bot settings, and it points to the external URL provided by ngrok.
+
+This setup should get you started with Dockerizing your Rasa project. Let me know if you have further questions or if there's anything specific to your project that you'd like help with.
